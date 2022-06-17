@@ -17,7 +17,7 @@ def get_weather(lat, lon, api_key):
 @app.route('/<lat>/<lon>/<api_key>')
 def index(lat, lon, api_key ):
     weather = get_weather(lat, lon, api_key)
-    #return render_template('index.html', weather=weather)
+    #return render_template('index.html', weather=weather) #hh
     return "<p><b>Weather !</b></p><br><p>%s</p>" % weather
 
 if __name__ == "__main__":
