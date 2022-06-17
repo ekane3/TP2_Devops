@@ -16,5 +16,6 @@ COPY app.py ./
 
 #Installing the required packages
 RUN pip install --no-cache-dir requests==2.27.1
+RUN pip install --no-cache-dir flask==2.1.2
 #From official image documentation
 CMD ["python", "app.py"]
