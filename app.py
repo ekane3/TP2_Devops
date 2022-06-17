@@ -20,5 +20,4 @@ def index( ):
     return f"{res}\n"
 
 if __name__ == "__main__":
-    #print(get_weather(lat, lon, api_key))
-    app.run(host="0.0.0.0", port=8083,debug=True)
+    app.run(debug=True)
