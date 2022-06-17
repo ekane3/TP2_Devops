@@ -4,7 +4,7 @@ import os
 
 from flask import Flask, render_template, request
 
-
+api_key = os.environ.get('API_KEY')
 app = Flask(__name__)
 
 # create a function that returns the weather for a specific location using env lat and lon
@@ -14,7 +14,7 @@ def get_weather(lat, lon, api_key):
     data = json.loads(response.text)
     return data
 
-@app.route('/<lat>/<lon>/<api_key>')
+@app.route('/<lat>/<lon>')
 def index(lat, lon, api_key ):
     weather = get_weather(lat, lon, api_key)
     #return render_template('index.html', weather=weather) #hh
