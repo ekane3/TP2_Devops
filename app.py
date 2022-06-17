@@ -22,4 +22,4 @@ def index(lat, lon, api_key ):
 
 if __name__ == "__main__":
     #print(get_weather(lat, lon, api_key))
-    index(lat, lon, api_key)
+    app.run(debug=True)
